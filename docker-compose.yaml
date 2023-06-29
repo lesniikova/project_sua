@@ -1,0 +1,11 @@
+version: "3"
+networks:
+  mynetwork:
+    external: true
+services:
+  react:
+    build: .
+    networks:
+      - mynetwork
+    ports:
+      - "4000:4000"
